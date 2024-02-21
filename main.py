@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_folium import st_folium
 from utils import search_places, get_reviews_from_api, generate_prompt, create_folium_map
 
-st.set_page_config(page_title="SpotOnST")
+st.set_page_config(page_title="SpotOn")
 st.title('📍 SpotOn')
 
 st.sidebar.info(
