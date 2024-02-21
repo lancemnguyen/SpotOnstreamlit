@@ -1,6 +1,5 @@
 import os
 from openai import OpenAI
-import streamlit as st
 import requests
 import folium
 from dotenv import load_dotenv
@@ -23,9 +22,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 
 
 # Function to search places using the Google Places API
-@st.cache_data
 def search_places(query):
-    # gmaps_api_key = os.getenv("GMAPS_API_KEY")
     base_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
     params = {
         'query': query,
@@ -57,7 +54,6 @@ def search_places(query):
 
 # Function to get reviews from the Google Places API (Place Details)
 def get_reviews_from_api(place_id):
-    # gmaps_api_key = os.getenv("GMAPS_API_KEY")
     details_url = 'https://maps.googleapis.com/maps/api/place/details/json'
     details_params = {
         'place_id': place_id,
