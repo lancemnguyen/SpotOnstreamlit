@@ -19,7 +19,7 @@ if 'selected_place' not in st.session_state:
 
 with st.sidebar:
     query = st.text_input('Enter a place to search:', '')
-    st.sidebar.caption('Note: Best to include city name with place.')
+    st.sidebar.caption('Note: Best to include city name with place (e.g. disneyland anaheim).')
     if query:
         st.session_state.results = search_places(query)
 
