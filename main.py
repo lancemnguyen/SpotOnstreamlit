@@ -70,7 +70,7 @@ with st.sidebar:
             st.write("No reviews available for this place.")
 
 # Map
-st.write('Interactive Map to Display Places')
+st.write('Interactive Map')
 
 # Display the interactive map using st_folium
 if st.session_state.results:
