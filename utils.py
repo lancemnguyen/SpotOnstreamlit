@@ -66,6 +66,11 @@ def get_reviews_from_api(place_id):
     return details_data.get('result', {}).get('reviews', [])
 
 
+def convert_price_to_dollars(price_level):
+    price_mapping = {0: "N/A", 1: "$", 2: "$$", 3: "$$$", 4: "$$$$"}
+    return price_mapping.get(price_level, "N/A")
+
+
 # Function to create Folium map with markers and set initial bounds
 def create_folium_map(places):
     m = folium.Map(location=[places[0]['lat'], places[0]['lng']], zoom_start=12)
