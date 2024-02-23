@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_folium import st_folium
-from utils import search_places, get_reviews_from_api, generate_prompt, create_folium_map
+from utils import search_places, get_reviews_from_api, convert_price_to_dollars, create_folium_map, generate_prompt
 
 st.set_page_config(page_title="SpotOn")
 st.title('📍 SpotOn')
@@ -52,7 +52,7 @@ with st.sidebar:
         st.write(f"Name: {place_name}")
         st.write(f"Address: {place_address}")
         st.write(f"Status: {business_status}")
-        st.write(f"Price Level: {price_level}")
+        st.write(f"Price Level: {convert_price_to_dollars(price_level)}")
         st.write(f"Rating: {rating}")
         st.write(f"Total Ratings: {user_ratings_total}")
 
