@@ -43,10 +43,18 @@ with st.sidebar:
         place_id = selected_place['place_id']
         place_name = selected_place['name']
         place_address = selected_place.get('address', 'N/A')
+        business_status = selected_place.get('business_status', 'N/A')
+        price_level = selected_place.get('price_level', 'N/A')
+        rating = selected_place.get('rating', 'N/A')
+        user_ratings_total = selected_place.get('user_ratings_total', 'N/A')
 
         st.subheader("Selected Place Details:")
         st.write(f"Name: {place_name}")
         st.write(f"Address: {place_address}")
+        st.write(f"Status: {business_status}")
+        st.write(f"Price Level: {price_level}")
+        st.write(f"Rating: {rating}")
+        st.write(f"Total Ratings: {user_ratings_total}")
 
         # Get and display reviews
         reviews = get_reviews_from_api(place_id)
