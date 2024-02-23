@@ -94,6 +94,13 @@ if prompt := st.chat_input():
     st.chat_message("user").write(prompt)
 
     # Generate, append, and display the chatbot's response using the selected place and user's input
-    response = generate_prompt(selected_place, prompt)
-    st.session_state.messages.append({"role": "assistant", "content": response})
-    st.chat_message("assistant").write(response)
+    if selected_place is not None:
+        response = generate_prompt(selected_place, prompt)
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        st.chat_message("assistant").write(response)
+    else:
+        st.warning("Please select a place first.")
+
+if st.button("Refresh Conversation"):
+    st.session_state.messages = [{"role": "assistant", "content": "Ask a question about the reviews of the selected place."}]
+    st.success("Conversation has been refreshed.")
