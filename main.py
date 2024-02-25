@@ -73,9 +73,9 @@ with st.sidebar:
             st.write("No reviews available for this place.")
 
 with st.sidebar.expander('**My Other Apps**'):
-    st.markdown('[RAG with LangChain](https://lcrags.streamlit.app/)')
-    st.markdown('[Qdoc](https://qdocst.streamlit.app/)')
-    st.markdown('[CooPA](https://coopas.streamlit.app/)')
+    st.caption('[LLM Optimization with RAG](https://lcrags.streamlit.app/)')
+    st.caption('[Qdoc](https://qdocst.streamlit.app/)')
+    st.caption('[CooPA](https://coopas.streamlit.app/)')
 
 # Map
 st.write('Interactive Map')
