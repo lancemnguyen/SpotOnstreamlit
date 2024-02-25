@@ -5,6 +5,8 @@ from utils import search_places, get_reviews_from_api, convert_price_to_dollars,
 st.set_page_config(page_title="SpotOn")
 st.title('📍 SpotOn')
 
+st.sidebar.markdown('[My Portfolio](https://lancen.streamlit.app/)')
+
 st.sidebar.info(
     """
     Info: SpotOn integrates OpenAI API with Google Places API, resulting in a question-answering platform about place reviews.
@@ -69,8 +71,7 @@ with st.sidebar:
         else:
             st.write("No reviews available for this place.")
 
-    st.sidebar.markdown('[My Portfolio](https://lancen.streamlit.app/)')
-    st.sidebar.header('My Other Apps')
+with st.sidebar.expander('My Other Apps')
     st.sidebar.markdown('[RAG with LangChain](https://lcrags.streamlit.app/)')
     st.sidebar.markdown('[Qdoc](https://qdocst.streamlit.app/)')
     st.sidebar.markdown('[CooPA](https://coopas.streamlit.app/)')
