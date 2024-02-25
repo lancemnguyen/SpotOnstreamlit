@@ -69,6 +69,12 @@ with st.sidebar:
         else:
             st.write("No reviews available for this place.")
 
+    st.sidebar.markdown('[My Portfolio](https://lancen.streamlit.app/)')
+    st.sidebar.header('My Other Apps')
+    st.sidebar.markdown('[RAG with LangChain](https://lcrags.streamlit.app/)')
+    st.sidebar.markdown('[Qdoc](https://qdocst.streamlit.app/)')
+    st.sidebar.markdown('[CooPA](https://coopas.streamlit.app/)')
+
 # Map
 st.write('Interactive Map')
 
