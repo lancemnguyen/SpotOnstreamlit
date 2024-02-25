@@ -7,7 +7,7 @@ st.title('📍 SpotOn')
 
 st.sidebar.info(
     """
-    Info: SpotOn is a web application that integrates Google Places API for searching places and ChatGPT API for generating answers based on the selected place reviews.
+    Info: SpotOn integrates OpenAI API with Google Places API, resulting in a question-answering platform about place reviews.
     """
 )
 
