@@ -5,8 +5,8 @@ from utils import search_places, get_reviews_from_api, convert_price_to_dollars,
 st.set_page_config(page_title="SpotOn")
 st.title('📍 SpotOn')
 
-st.sidebar.markdown('[My Portfolio](https://lancen.streamlit.app/)')
-st.sidebar.caption("Made by an [Lance Nguyen](https://www.linkedin.com/in/lancedin/)")
+st.sidebar.write('[My Portfolio](https://lancen.streamlit.app/)')
+st.sidebar.markdown("Made by [Lance Nguyen](https://www.linkedin.com/in/lancedin/)")
 
 st.sidebar.info(
     """
@@ -73,9 +73,9 @@ with st.sidebar:
             st.write("No reviews available for this place.")
 
 with st.sidebar.expander('**My Other Apps**'):
-    st.sidebar.markdown('[RAG with LangChain](https://lcrags.streamlit.app/)')
-    st.sidebar.markdown('[Qdoc](https://qdocst.streamlit.app/)')
-    st.sidebar.markdown('[CooPA](https://coopas.streamlit.app/)')
+    st.markdown('[RAG with LangChain](https://lcrags.streamlit.app/)')
+    st.markdown('[Qdoc](https://qdocst.streamlit.app/)')
+    st.markdown('[CooPA](https://coopas.streamlit.app/)')
 
 # Map
 st.write('Interactive Map')
