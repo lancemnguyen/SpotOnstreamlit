@@ -6,7 +6,7 @@ st.set_page_config(page_title="SpotOn")
 st.title('📍 SpotOn')
 
 st.sidebar.write('[My Portfolio](https://lancen.streamlit.app/)')
-st.sidebar.markdown("Made by [Lance Nguyen](https://www.linkedin.com/in/lancedin/)")
+st.sidebar.caption("Made by [Lance Nguyen](https://www.linkedin.com/in/lancedin/)")
 
 st.sidebar.info(
     """
