@@ -71,7 +71,7 @@ with st.sidebar:
         else:
             st.write("No reviews available for this place.")
 
-with st.sidebar.expander('My Other Apps')
+with st.sidebar.expander('**My Other Apps**'):
     st.sidebar.markdown('[RAG with LangChain](https://lcrags.streamlit.app/)')
     st.sidebar.markdown('[Qdoc](https://qdocst.streamlit.app/)')
     st.sidebar.markdown('[CooPA](https://coopas.streamlit.app/)')
