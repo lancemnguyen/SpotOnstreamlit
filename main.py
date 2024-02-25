@@ -8,6 +8,11 @@ st.title('📍 SpotOn')
 st.sidebar.write('[My Portfolio](https://lancen.streamlit.app/)')
 st.sidebar.caption("Made by [Lance Nguyen](https://www.linkedin.com/in/lancedin/)")
 
+with st.sidebar.expander('**My Other Apps**'):
+    st.caption('[LLM Optimization with RAG](https://lcrags.streamlit.app/)')
+    st.caption('[Qdoc](https://qdocst.streamlit.app/)')
+    st.caption('[CooPA](https://coopas.streamlit.app/)')
+
 st.sidebar.info(
     """
     Info: SpotOn integrates OpenAI API with Google Places API, resulting in a question-answering platform about place reviews.
@@ -71,11 +76,6 @@ with st.sidebar:
             st.caption("Note: Limited to 5 reviews due to Google's API.")
         else:
             st.write("No reviews available for this place.")
-
-with st.sidebar.expander('**My Other Apps**'):
-    st.caption('[LLM Optimization with RAG](https://lcrags.streamlit.app/)')
-    st.caption('[Qdoc](https://qdocst.streamlit.app/)')
-    st.caption('[CooPA](https://coopas.streamlit.app/)')
 
 # Map
 st.write('Interactive Map')
