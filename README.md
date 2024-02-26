@@ -4,7 +4,7 @@ SpotOn is a review analysis application that integrates OpenAI API with Google P
 
 ## Features
 
-- **Review-based Q&A**: Leverages place reviews to answer user queries using OpenAI's GPT-3.5-turbo language model.
+- **Review-based Q&A**: Leverages place reviews to answer user queries using GPT-3.5-turbo.
 
 - **Place Search**: Utilizes the Google Places API to search for places.
 
