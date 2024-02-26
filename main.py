@@ -11,7 +11,7 @@ st.sidebar.caption("Made by [Lance Nguyen](https://www.linkedin.com/in/lancedin/
 st.sidebar.info(
     """
     Info: SpotOn integrates OpenAI API with Google Places API, resulting in a question-answering platform about place reviews.
-    Start by entering a place to search in the sidebar.
+    Start by entering a place to search below in the sidebar.
     """
 )
 
