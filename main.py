@@ -86,7 +86,7 @@ with col2:
     
     # Display the interactive map using st_folium
     if st.session_state.results:
-        st_folium_map = st_folium(create_folium_map(st.session_state.results), width=500, height=200)
+        st_folium_map = st_folium(create_folium_map(st.session_state.results), width=400, height=300)
     else:
         st.warning("No search results to display on the map.")
 
