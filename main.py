@@ -82,7 +82,7 @@ with st.sidebar:
 
 with col2:
     # Map
-    st.write('Interactive Map')
+    st.write('**Interactive Map**')
     
     # Display the interactive map using st_folium
     if st.session_state.results:
