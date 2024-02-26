@@ -35,13 +35,15 @@ with st.sidebar:
     if st.button('Search'):
         st.session_state.results = search_places(query)
 
-# Directly update the selected_place based on the selection
-st.session_state.selected_place = st.selectbox(
-    'First, search a place in the sidebar, then select a place from the dropdown menu below:',
-    st.session_state.results,
-    format_func=lambda result: f"{st.session_state.results.index(result) + 1}. {result['name']} - {result.get('address', 'N/A')}",
-    key='selectbox'
-)
+col1, col2 = st.columns(2)
+with col1:
+    # Directly update the selected_place based on the selection
+    st.session_state.selected_place = st.selectbox(
+        'First, search a place in the sidebar, then select a place from the dropdown menu below:',
+        st.session_state.results,
+        format_func=lambda result: f"{st.session_state.results.index(result) + 1}. {result['name']} - {result.get('address', 'N/A')}",
+        key='selectbox'
+    )
 
 # Access the selected place from session state
 selected_place = st.session_state.selected_place
@@ -78,14 +80,15 @@ with st.sidebar:
         else:
             st.write("No reviews available for this place.")
 
-# Map
-st.write('Interactive Map')
-
-# Display the interactive map using st_folium
-if st.session_state.results:
-    st_folium_map = st_folium(create_folium_map(st.session_state.results), width=600, height=300)
-else:
-    st.warning("No search results to display on the map.")
+with col2:
+    # Map
+    st.write('Interactive Map')
+    
+    # Display the interactive map using st_folium
+    if st.session_state.results:
+        st_folium_map = st_folium(create_folium_map(st.session_state.results), width=600, height=300)
+    else:
+        st.warning("No search results to display on the map.")
 
 # Chatbot section
 st.header("💬 Chatbot")
