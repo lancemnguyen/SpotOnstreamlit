@@ -39,7 +39,7 @@ col1, col2 = st.columns(2)
 with col1:
     # Directly update the selected_place based on the selection
     st.session_state.selected_place = st.selectbox(
-        'First, search a place in the sidebar, then select a place from the dropdown menu below:',
+        'Search a place in the sidebar, then select a place from the dropdown menu below:',
         st.session_state.results,
         format_func=lambda result: f"{st.session_state.results.index(result) + 1}. {result['name']} - {result.get('address', 'N/A')}",
         key='selectbox'
