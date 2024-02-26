@@ -94,7 +94,7 @@ with col2:
 st.header("💬 Chatbot")
 
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "Ask a question about the reviews of the selected place."}]
+    st.session_state["messages"] = [{"role": "assistant", "content": "Ask me anything about the reviews of the selected place."}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
@@ -114,5 +114,5 @@ if prompt := st.chat_input():
         st.warning("Please select a place first.")
 
 if st.button("Refresh Conversation"):
-    st.session_state.messages = [{"role": "assistant", "content": "Ask a question about the reviews of the selected place."}]
+    st.session_state.messages = [{"role": "assistant", "content": "Ask me anything about the reviews of the selected place."}]
     st.success("Conversation has been refreshed.")
