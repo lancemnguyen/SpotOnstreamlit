@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_folium import st_folium
 from utils import search_places, get_reviews_from_api, convert_price_to_dollars, create_folium_map, generate_prompt
 
-st.set_page_config(page_title="SpotOn")
+st.set_page_config(page_title="SpotOn", layout='wide')
 st.title('📍 SpotOn')
 
 st.sidebar.write('[My Portfolio](https://lancen.streamlit.app/)')
@@ -86,7 +86,7 @@ with col2:
     
     # Display the interactive map using st_folium
     if st.session_state.results:
-        st_folium_map = st_folium(create_folium_map(st.session_state.results), width=600, height=300)
+        st_folium_map = st_folium(create_folium_map(st.session_state.results), width=500, height=200)
     else:
         st.warning("No search results to display on the map.")
 
