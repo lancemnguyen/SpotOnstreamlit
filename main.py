@@ -3,7 +3,7 @@ from streamlit_folium import st_folium
 from utils import search_places, get_reviews_from_api, convert_price_to_dollars, create_folium_map, generate_prompt
 
 st.set_page_config(page_title="SpotOn", layout='wide')
-st.title('📍 SpotOn')
+st.title('📍 SpotOn (Review Analysis)')
 
 st.sidebar.write('[My Portfolio](https://lancen.streamlit.app/)')
 st.sidebar.caption("Made by [Lance Nguyen](https://www.linkedin.com/in/lancedin/)")
@@ -17,8 +17,8 @@ st.sidebar.info(
 
 with st.sidebar.expander('**My Other Apps**'):
     st.caption('[LLM Optimization with RAG](https://lcrags.streamlit.app/)')
-    st.caption('[Qdoc](https://qdocst.streamlit.app/)')
-    st.caption('[CooPA](https://coopas.streamlit.app/)')
+    st.caption('[Qdoc (Article Assistant)](https://qdocst.streamlit.app/)')
+    st.caption('[CooPA (Search Chatbot)](https://coopas.streamlit.app/)')
 
 # Initialize session state
 if 'results' not in st.session_state:
